@@ -1,5 +1,7 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 import bookImg from "../assets/img/book-circle.webp";
+import { Link } from 'expo-router';
+
 
 const Home = () => {
   return (
@@ -12,6 +14,8 @@ const Home = () => {
           Hello, this is a card.
         </Text>
       </View> */}
+      <Link href="/about" style={styles.link}>About Page</Link>
+      <Link href="/contact" style={styles.link}>Contact Page</Link>
     </View>
   )
 }
@@ -40,5 +44,9 @@ const styles = StyleSheet.create({
     height:250, 
     borderRadius:50
 
+  },
+  link:{
+    marginVertical:10,
+    borderBottomWidth:1
   }
 })
