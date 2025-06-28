@@ -14,12 +14,12 @@ const Home = () => {
       <Spacer height={10}/>
     <ThemeText>Book App</ThemeText>
     <Spacer height={10}/>
-      <Pressable onPress={() => router.push("/about")} style={styles.link}>
-        <ThemeText>About Page</ThemeText>
+      <Pressable onPress={() => router.push("/login")} style={styles.link}>
+        <ThemeText>Login Page</ThemeText>
       </Pressable>
 
-      <Pressable onPress={() => router.push("/contact")} style={styles.link}>
-        <ThemeText>Contact Page</ThemeText>
+      <Pressable onPress={() => router.push("/register")} style={styles.link}>
+        <ThemeText>Register Page</ThemeText>
       </Pressable>
     </ThemedView>
     // <View style={styles.container}>
