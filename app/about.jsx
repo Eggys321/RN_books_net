@@ -1,9 +1,13 @@
 import { Link, router } from "expo-router";
-import { StyleSheet, Text, View, Pressable } from "react-native";
+import { StyleSheet, Text, View, Pressable, useColorScheme } from "react-native";
+import { Colors } from "../constants/Colors";
+
 
 const About = () => {
+    const colorScheme = useColorScheme();
+        const theme = Colors[colorScheme] ?? Colors.light
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {backgroundColor:theme.background}]}>
       <Text style={styles.title}>About Page</Text>
       <Pressable onPress={() => router.back()} style={styles.link}>
         <Text>Back Home</Text>
