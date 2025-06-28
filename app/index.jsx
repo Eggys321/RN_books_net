@@ -1,20 +1,27 @@
 import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import bookImg from "../assets/img/book-circle.webp";
 import { Link, router } from "expo-router";
+import ThemedView from "../components/ThemedView";
+import Spacer from "../components/Spacer";
+import ThemeText from "../components/ThemeText";
 // import { router } from 'expo-router';
 
 const Home = () => {
   return (
-    <View style={styles.container}>
+    <ThemedView style={styles.container}>
       <Image source={bookImg} style={styles.img} />
+      <ThemeText style={styles.title} title={true}>The Best</ThemeText>
+      <Spacer height={10}/>
+    <ThemeText>Book App</ThemeText>
+    <Spacer height={10}/>
       <Pressable onPress={() => router.push("/about")} style={styles.link}>
-        <Text>About Page</Text>
+        <ThemeText>About Page</ThemeText>
       </Pressable>
 
       <Pressable onPress={() => router.push("/contact")} style={styles.link}>
-        <Text>Contact Page</Text>
+        <ThemeText>Contact Page</ThemeText>
       </Pressable>
-    </View>
+    </ThemedView>
     // <View style={styles.container}>
     //   <Image source={bookImg} style={styles.img}/>
     //   <Text style={styles.title}>The Best</Text>
